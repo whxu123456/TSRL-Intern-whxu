@@ -43,3 +43,26 @@ The experiments are organized by the model type and filtering algorithm used.
 *   **Description:** 
     *   Compares EDH-Log, EDH-Exact, LEDH-Exact, and Kernel PFF.
     *   Analyzes flow magnitude stability.
+
+### 6.  Stochastic Particle Flow Filters
+*   **Goal:** Implement Dai and Daum (2022) optimal homotopy to mitigate SDE stiffness.
+*   **Key Script:** `main_stochastic_Dai22.py`, `main_stochastic_Li17.py`
+*   **Description:** 
+    *   Reproduces the 2D single-target tracking example from Dai and Daum (2022).
+    *   Applies optimal homotopy to the multi-target acoustic tracking scenario.
+ 
+
+### 7.  Differentiable Particle Filters
+*   **Goal:** Implement and compare differentiable resampling schemes for end-to-end learning.
+*   **Key Script:** `main_soft_resampling.py`, `main_Diffpf_LGSSM.py`, `main_compare_resampling.py`
+*   **Description:** 
+    *   valuates Soft-Resampling​ and Entropy-Regularized Optimal Transport (OT) Resampling​ on a 2D LGSSM.
+    *   Compares different methods of DPF.
+ 
+### 8.   DPF for Nonlinear SSM & Hamiltonian Monte Carlo (HMC)
+*   **Goal:** Integrate PF-PF with OT resampling for gradient-based Bayesian inference.
+*   **Key Script:** `main_nonlinear_ssm_dpf.py`
+*   **Description:** 
+    *   Uses PF-PF (LEDH) + OT resampling for the nonlinear SSM from Andrieu et al. (2010).
+    *   Compares HMC vs. PMMH for parameter inference.
+    *   Analyzes the bias-variance trade-off of OT regularization and gradient stability.
