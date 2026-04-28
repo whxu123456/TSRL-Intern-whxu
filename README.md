@@ -61,7 +61,7 @@ The experiments are organized by the model type and filtering algorithm used.
  
 ### 8.   DPF for Nonlinear SSM & Hamiltonian Monte Carlo (HMC)
 *   **Goal:** Integrate PF-PF with OT resampling for gradient-based Bayesian inference.
-*   **Key Script:** `main_nonlinear_ssm_dpf.py`
+*   **Key Script:** `main_nonlinear_ssm_pfpf.py`, `main_nonlinear_ssm_dpf.py`
 *   **Description:** 
     *   Uses PF-PF (LEDH) + OT resampling for the nonlinear SSM from Andrieu et al. (2010).
     *   Compares HMC vs. PMMH for parameter inference.
